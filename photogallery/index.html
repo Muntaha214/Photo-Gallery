@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Gallery Project</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- ------------- LEFT SIDE CAROUSEL ------------- -->
+  <div class="carousel-box">
+    <h2>Image Carousel</h2>
+
+    <div class="carousel" id="carousel">
+      <div class="slides" id="slides">
+        <img src="images/crochet.jpeg">
+        <img src="images/ring.jpeg">
+      </div>
+    </div>
+
+    <p class="hint">Drag left or right to slide ➜</p>
+  </div>
+
+
+  <!-- ------------- RIGHT SIDE LOGIN ------------- -->
+  <div class="login-box" id="login-area">
+    <h2>User Login</h2>
+
+    <input type="text" id="username" placeholder="Enter your name">
+
+    <input type="password" id="password" placeholder="Enter password">
+
+    <button onclick="login()">Login</button>
+  </div>
+
+</div>
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img id="lightboxImg">
+</div>
+
+
+<!-- ------------ AFTER LOGIN GALLERY SECTION ------------ -->
+<div class="gallery-section" id="gallery">
+
+  <div class="topbar">
+    <h2 id="welcome"></h2>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <input type="text" id="galleryName" placeholder="Enter Gallery Name">
+
+  <input type="file" id="imageUpload" multiple accept="image/*">
+
+  <button onclick="addImages()">Add Images</button>
+
+  <h3 id="showGalleryName"></h3>
+
+  <div id="imagesContainer" class="images"></div>
+</div>
+
+
+
+<!-- Link JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
